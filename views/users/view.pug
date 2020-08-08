@@ -1,0 +1,9 @@
+extends ../layouts/common
+
+block content
+  span Hello
+  span &nbsp;
+  span= user.name
+
+  if user.avatar
+    img= user.avatar

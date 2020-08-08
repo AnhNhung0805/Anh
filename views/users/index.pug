@@ -1,0 +1,24 @@
+extends ../layouts/common
+
+block content
+  h1 Users
+  a.btn.btn-primary(href="/users/create") Create new user
+
+  .d-flex.align-items-center
+    form.ml-auto.d-flex(action="/users/search", method="GET")
+      input.form-control(type="text", name="name")
+      button(class="btn btn-primary ml-2") Search
+  table.table
+    tr
+      th Avatar
+      th Name
+      th Phone
+      th Action
+    each user in users
+      tr
+        td
+          img.img(src=user.avatar, width="32")
+        td= user.name
+        td= user.phone
+        td
+          a.btn.btn-light(href='/users/' + user.id) View

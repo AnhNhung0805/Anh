@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 32px;
+    border-radius: 50%;
+}
